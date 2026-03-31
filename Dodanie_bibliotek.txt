@@ -12,3 +12,18 @@ Przykładowy skan zakresu 6 hostów
 
 nmap 192.168.1.1-6 -O -sV -oX wynik.xml
 
+Konwersja:
+
+python3 parse_csv.py wynik.xml 
+
+python3 parse_html.py wynik.xml 
+
+python3 parse_docx.py wynik.xml
+
+Lub
+
+# Skanowanie + eksport CSV w jednej linii
+nmap 192.168.1.1-6 -O -sV -oX wynik.xml ; python3 parse_csv.py wynik.xml
+
+# Skanowanie + wszystkie trzy formaty
+nmap 192.168.1.1-6 -O -sV -oX wynik.xml ; python3 parse_csv.py wynik.xml ; python3 parse_html.py wynik.xml ; python3 parse_docx.py wynik.xml
