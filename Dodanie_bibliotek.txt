@@ -1,0 +1,14 @@
+Instalacja brakujących bibliotek Windows
+
+python3 -m pip install lxml python-docx
+
+
+Instalacja brakujących bibliotek Linux
+
+python3 -m pip install lxml python-docx --break-system-packages
+
+
+Przykładowy skan zakresu 6 hostów
+
+nmap 192.168.1.1-6 -O -sV -oX wynik.xml
+
